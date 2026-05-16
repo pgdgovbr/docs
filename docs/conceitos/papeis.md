@@ -8,6 +8,8 @@ O servidor é o participante do PGD. Ele trabalha sob um Plano de Trabalho aprov
 
 **O que pode fazer:**
 
+- **Criar seu próprio Plano de Trabalho** (do zero ou clonando um plano anterior)
+- **Assinar o plano** após revisão e enviar para a chefia aprovar
 - Ver seu Plano de Trabalho ativo (contribuições, datas, modalidade)
 - Registrar a execução de cada período avaliativo
 - Ver as avaliações recebidas com nota e justificativa
@@ -29,7 +31,7 @@ A chefia imediata é responsável por sua equipe direta. Ela cria e gerencia os 
 **O que pode fazer:**
 
 - Ver todos os servidores da equipe com KPIs resumidos
-- Criar Planos de Trabalho para servidores sem plano vigente
+- **Revisar e assinar** os Planos de Trabalho propostos pelos servidores; ajustar quando necessário; criar PT diretamente apenas em casos de exceção (servidor ausente, recém-chegado)
 - Avaliar os registros de execução enviados pelos servidores
 - Responder aos recursos (contestações) abertos pelos servidores
 - Emitir convocações de comparecimento presencial para servidores em teletrabalho integral

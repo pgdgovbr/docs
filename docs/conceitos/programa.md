@@ -10,15 +10,17 @@ Em vez de controlar a presença física do servidor, o PGD controla **o que foi 
 
 ```mermaid
 graph LR
-    A[Plano de Trabalho<br/>criado pela chefia] --> B[Servidor executa<br/>as atividades]
-    B --> C[Servidor registra<br/>a execução mensal]
-    C --> D[Chefia avalia<br/>o registro]
-    D --> E{Servidor concorda?}
-    E -->|Sim| F[Período encerrado]
-    E -->|Não| G[Servidor contesta<br/>recurso]
-    G --> H[Chefia responde<br/>ao recurso]
-    H --> F
+    A[Servidor propõe<br/>Plano de Trabalho] --> B[Chefia revisa<br/>e assina]
+    B --> C[Plano em execução]
+    C --> D[Servidor registra<br/>mensalmente]
+    D --> E[Chefia avalia]
+    E --> F{Servidor concorda?}
+    F -->|Sim| G[Período encerrado]
+    F -->|Não| H[Recurso]
+    H --> G
 ```
+
+O plano de trabalho é **pactuado**: servidor propõe, chefia revisa e ambos assinam. Só depois disso o plano entra em execução. → [Saiba mais sobre a pactuação bilateral](pactuacao-bilateral.md)
 
 ## Por que existe
 
@@ -30,10 +32,12 @@ O PGD surgiu como resposta à necessidade de:
 
 ## Quem participa
 
-- **Servidor:** executa atividades e registra mensalmente o que foi feito
-- **Chefia imediata:** cria o plano de trabalho e avalia os registros
+- **Servidor:** propõe seu Plano de Trabalho, executa atividades e registra mensalmente
+- **Chefia imediata:** revisa e assina o Plano de Trabalho; avalia os registros
 - **Gestor de unidade:** aprova os planos de entregas da unidade e monitora KPIs
 - **Admin:** gerencia participantes e acompanha a conformidade sistêmica
+
+Servidor e chefia constroem o plano juntos — não é mais imposto pela chefia.
 
 ## Base legal resumida
 
