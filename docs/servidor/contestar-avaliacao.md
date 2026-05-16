@@ -8,6 +8,8 @@ Se você discordar da nota recebida, pode abrir um **recurso** dentro de 10 dias
 
 ### 1. Acesse a avaliação
 
+![Tela de avaliação com badge da nota e detalhes da execução registrada](../assets/screenshots/servidor/contestar-avaliacao.png)
+
 **Meu Plano** → clique no período avaliativo que você quer contestar.
 
 ### 2. Verifique o prazo

@@ -21,6 +21,8 @@ Após você enviar o registro de execução, sua chefia imediata avalia o perío
 
 ## O que você encontra na página de avaliação
 
+![Página de avaliação com nota 4 e prazo para contestar](../assets/screenshots/servidor/avaliacao-detalhe.png)
+
 - **Nota** — exibida com badge colorido
 - **Justificativa da chefia** — texto explicando a nota (obrigatório para notas 1, 4 e 5)
 - **Data da avaliação**
