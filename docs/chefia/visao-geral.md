@@ -16,6 +16,8 @@ graph TD
 
 ## Sua tela principal
 
+![Dashboard da chefia imediata com KPIs da equipe](../assets/screenshots/chefia/dashboard.png)
+
 Ao fazer login, você vê o **Dashboard** com:
 
 - **KPIs da equipe** — total de servidores, avaliações pendentes, recursos em aberto

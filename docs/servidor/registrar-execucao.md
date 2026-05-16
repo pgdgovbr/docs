@@ -8,6 +8,8 @@ Ao final de cada período avaliativo, você precisa descrever o que fez no mês.
 
 ### 1. Acesse a tela de registro
 
+![Formulário de registro de execução](../assets/screenshots/servidor/registrar-execucao.png)
+
 No menu superior, clique em **Meu Plano** → depois clique em **"Registrar execução"**.
 
 Ou acesse diretamente: `/meu-plano/registrar`

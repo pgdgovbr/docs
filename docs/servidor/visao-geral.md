@@ -18,6 +18,8 @@ graph LR
 
 ## Sua tela principal
 
+![Dashboard do servidor no PGD Libre](../assets/screenshots/servidor/dashboard.png)
+
 Ao fazer login, você vê o **Dashboard** com:
 
 - **Plano de Trabalho ativo** — status, modalidade e dias restantes para o próximo registro

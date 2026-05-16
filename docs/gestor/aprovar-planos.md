@@ -14,6 +14,8 @@ Ou acesse **Conformidade** → identifique o PE com status "Aguardando aprovaç�
 
 ### 2. Revise o plano
 
+![Detalhe do Plano de Entregas aguardando aprovação](../assets/screenshots/gestor/aprovar-planos-detalhe.png)
+
 Na página do Plano de Entregas, você vê:
 
 | Seção | O que verificar |

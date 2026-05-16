@@ -12,6 +12,8 @@ Explore as funcionalidades da chefia imediata usando a persona **Carlos Souza** 
 
 ### No dashboard (`/`)
 
+![Dashboard de Carlos Souza com alertas de equipe](../assets/screenshots/demo/dashboard-chefia.png)
+
 - KPIs: 4 servidores na equipe, **1 avaliação pendente**, 3 planos em execução
 - Alerta de recurso pendente (Ana Silva)
 

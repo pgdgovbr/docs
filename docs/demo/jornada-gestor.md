@@ -14,6 +14,8 @@
 
 ### No dashboard (`/`)
 
+![Dashboard de Maria Fernanda com KPIs consolidados](../assets/screenshots/demo/dashboard-gestor.png)
+
 - KPIs consolidados: 5 servidores, 2 planos de entrega, status de sincronização
 
 ### No painel de conformidade (`/conformidade`)

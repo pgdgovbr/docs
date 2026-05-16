@@ -14,6 +14,8 @@ graph LR
 
 ## Sua tela principal
 
+![Dashboard do gestor com KPIs consolidados da unidade](../assets/screenshots/gestor/dashboard.png)
+
 Ao fazer login, você vê o **Dashboard** com KPIs consolidados de todas as equipes:
 
 - Total de servidores participantes

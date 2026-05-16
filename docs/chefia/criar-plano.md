@@ -22,6 +22,8 @@ O wizard tem 5 passos:
 
 ### Passo 1 — Participante e período
 
+![Wizard passo 1: seleção de participante e datas do plano](../assets/screenshots/chefia/criar-plano-passo1.png)
+
 - **Selecione o participante** — o servidor para quem você está criando o plano
 - **Data de início** — quando o plano começa a vigorar
 - **Data de fim** — quando o plano encerra (pode ser renovado)
@@ -52,6 +54,8 @@ Os critérios ficam visíveis para o servidor e guiam a auto-descrição dos reg
 
 ### Passo 4 — Contribuições
 
+![Wizard passo 4: tabela de contribuições com percentuais](../assets/screenshots/chefia/criar-plano-contribuicoes.png)
+
 As contribuições são as atividades que o servidor vai executar. A soma dos percentuais deve ser **exatamente 100%**.
 
 | Campo | O que preencher |
@@ -70,6 +74,8 @@ As contribuições são as atividades que o servidor vai executar. A soma dos pe
 ---
 
 ### Passo 5 — Revisão e envio
+
+![Wizard passo 5: revisão completa antes de confirmar o plano](../assets/screenshots/chefia/criar-plano-confirmacao.png)
 
 Revise todas as informações antes de confirmar. Após o envio:
 

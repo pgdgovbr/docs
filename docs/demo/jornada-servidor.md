@@ -12,6 +12,8 @@ Explore as funcionalidades do servidor usando a persona **Ana Silva** (`servidor
 
 ### O que você verá no dashboard (`/`)
 
+![Dashboard de Ana Silva mostrando plano ativo e notificações](../assets/screenshots/demo/dashboard-servidor.png)
+
 - Card "Plano de Trabalho ativo" com a pílula de urgência (dias restantes para registrar)
 - Última avaliação recebida: **nota 4 — Insuficiente**, com recurso em aberto
 - Notificação de avaliação realizada

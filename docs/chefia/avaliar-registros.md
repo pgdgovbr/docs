@@ -6,6 +6,8 @@ Quando um servidor envia o registro mensal de execução, você recebe uma notif
 
 ## Passo a passo
 
+![Tela de avaliação de registro com seletor de nota](../assets/screenshots/chefia/avaliar-registros.png)
+
 ### 1. Acesse o registro
 
 Em **Equipe**, clique no servidor que tem avaliação pendente → clique no Plano de Trabalho → clique no período com status "Registrado — aguardando avaliação".

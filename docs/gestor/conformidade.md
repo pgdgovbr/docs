@@ -8,6 +8,8 @@ Menu superior → **Conformidade** (ou acesse `/conformidade`)
 
 ## O que você vê
 
+![Painel de conformidade com tabela de envios para a API Central](../assets/screenshots/gestor/conformidade.png)
+
 A tela exibe uma tabela com todas as tentativas de envio para a API Central:
 
 | Coluna | O que significa |

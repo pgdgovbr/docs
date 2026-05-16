@@ -8,6 +8,8 @@ Menu superior → **Meu Plano** (ou acesse `/meu-plano` diretamente)
 
 ## O que você encontra lá
 
+![Tela Meu Plano com contribuições e histórico de períodos](../assets/screenshots/servidor/meu-plano.png)
+
 ### Informações gerais do plano
 
 | Campo | O que significa |

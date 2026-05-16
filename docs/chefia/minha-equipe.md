@@ -8,6 +8,8 @@ Menu superior → **Equipe** (ou acesse `/equipe`)
 
 ## O que você vê na tabela
 
+![Tela Equipe com tabela de servidores e badges de pendências](../assets/screenshots/chefia/minha-equipe.png)
+
 Para cada servidor, a tabela exibe:
 
 | Coluna | O que significa |
