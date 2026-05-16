@@ -1,22 +1,39 @@
-# Criar Plano de Trabalho
+# Criar Plano de Trabalho (caso excepcional)
 
-O Plano de Trabalho define as atividades que o servidor vai executar e os critérios pelos quais será avaliado. Você cria um plano para cada servidor da sua equipe.
+!!! warning "O caminho padrão é o próprio servidor criar"
+    No PGD Libre, **o fluxo padrão é o servidor propor o Plano de Trabalho**. Use este wizard apenas em exceções: servidor recém-chegado, ausência prolongada, ou outros casos em que não é viável o servidor propor.
 
-> **Antes de começar:** o servidor deve ser participante ativo do PGD na sua unidade e não ter um Plano de Trabalho vigente para o período desejado.
+## Quando criar diretamente
 
-## Quando criar um plano
+- Servidor recém-chegado que ainda não tem acesso ou domínio do sistema
+- Servidor em ausência prolongada (licença, afastamento) cujo plano precisa ser pactuado
+- Casos pontuais em que a chefia precisa adiantar a pactuação por razões operacionais
 
-- Quando um servidor novo entra na equipe
-- Quando o plano anterior encerrou e precisa de renovação
-- Quando um servidor é transferido para sua equipe e ainda não tem plano
+Em todos os outros casos, oriente o servidor a criar o plano em [/meu-plano/criar](../servidor/criar-plano.md).
 
 ## Passo a passo
 
-Acesse **Equipe** → clique no servidor sem plano → clique em **"Criar Plano de Trabalho"**
+Acesse **Equipe** → clique no servidor → clique em **"Criar Plano de Trabalho"**
 
 Ou acesse diretamente: `/equipe/planos-trabalho/novo`
 
-O wizard tem 5 passos:
+O wizard tem 6 passos (com o passo 0 de confirmação da exceção):
+
+---
+
+### Passo 0 — Confirmar exceção
+
+![Wizard passo 0: card de confirmação de exceção com motivo](../assets/screenshots/chefia/novo-pt-excecao.png)
+
+Antes de prosseguir, você precisa selecionar o **motivo da exceção**:
+
+- Servidor recém-chegado
+- Servidor em ausência prolongada
+- Outro motivo (com campo de justificativa)
+
+Esse registro fica no histórico de edições do plano, deixando transparente que ele foi criado por exceção.
+
+Clique em **"Confirmar e continuar"** para abrir o wizard.
 
 ---
 
@@ -44,6 +61,7 @@ O wizard tem 5 passos:
 Descreva os critérios que você vai usar para avaliar o servidor. Seja específico:
 
 **Exemplos de critérios:**
+
 - "Qualidade e pontualidade das entregas conforme cronograma acordado"
 - "Participação ativa nas reuniões de equipe"
 - "Resolução de chamados dentro dos SLAs definidos"
@@ -65,6 +83,7 @@ As contribuições são as atividades que o servidor vai executar. A soma dos pe
 | **Tipo** | 1 (atividade da unidade), 2 (atividade de suporte), 3 (cross-unit) |
 
 **Exemplo:**
+
 ```
 70% → Desenvolvimento de sistemas internos (tipo 1)
 20% → Suporte técnico à equipe (tipo 2)
@@ -75,14 +94,29 @@ As contribuições são as atividades que o servidor vai executar. A soma dos pe
 
 ### Passo 5 — Revisão e envio
 
-![Wizard passo 5: revisão completa antes de confirmar o plano](../assets/screenshots/chefia/criar-plano-confirmacao.png)
+![Wizard passo 5: revisão completa antes de assinar](../assets/screenshots/chefia/criar-plano-confirmacao.png)
 
-Revise todas as informações antes de confirmar. Após o envio:
+Revise todas as informações. O CTA final é **"Assinar e enviar para servidor"** — você assina nesta etapa.
 
-- O plano fica com status **"Em execução"** imediatamente (ou "Aprovado" se precisar de validação adicional)
-- O servidor recebe notificação de que tem um plano ativo
-- Você não pode editar o plano após o envio — entre em contato com o admin para alterações
+Para assinar, você confirma os 3 itens:
+
+1. Li e entendi o conteúdo do Plano de Trabalho.
+2. Concordo com as contribuições, percentuais e critérios.
+3. Estou ciente de que esta assinatura tem valor formal de pactuação.
+
+## O que acontece depois
+
+- O plano fica com status **"Aguardando assinatura do servidor"**.
+- O servidor recebe notificação para [revisar e assinar a sua versão](../servidor/revisar-plano.md).
+- O plano **só entra em execução** depois que o servidor também assinar — a pactuação é sempre bilateral.
+
+Se o servidor discordar, ele pode devolver o plano para ajustes (volta para você) ou cancelar.
 
 ## Quando o servidor ainda não tem TCR
 
 O TCR (Termo de Ciência e Responsabilidade) precisa estar ativo antes de criar o plano. Se o servidor ainda não assinou o TCR, entre em contato com o admin para regularizar.
+
+## Veja também
+
+- [Revisar e assinar Plano de Trabalho](revisar-plano.md) — fluxo padrão (quando o servidor cria)
+- [Pactuação bilateral](../conceitos/pactuacao-bilateral.md) — conceito e diagrama de estados
