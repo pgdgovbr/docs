@@ -39,9 +39,13 @@ Para cada servidor, a tabela exibe:
 **Servidor com "Recurso aberto":**
 → [Responda ao recurso](responder-recurso.md) dentro do prazo de 7 dias
 
-## Acessando o Plano de Trabalho de um servidor
+## Acessando o perfil de um servidor
 
-Clique no nome do servidor → veja o Plano de Trabalho ativo com:
+Clique no nome do servidor para ver o perfil completo com planos e histórico:
+
+![Perfil do participante com plano de trabalho ativo](../assets/screenshots/chefia/participante-detalhe.png)
+
+No perfil você encontra o Plano de Trabalho ativo com:
 
 - Contribuições e percentuais
 - Histórico de períodos avaliativos

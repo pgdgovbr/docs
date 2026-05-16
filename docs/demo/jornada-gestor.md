@@ -71,10 +71,14 @@
 
 ### Administração de participantes (`/admin/participantes`)
 
+![Lista de participantes no painel de admin](../assets/screenshots/admin/participantes.png)
+
 - Lista completa: Ana, João, Carla, Lucas, Pedro
 - Editar dados cadastrais de qualquer participante
 
 ### Configuração institucional (`/admin/institucional`)
+
+![Configuração institucional com abas: unidades, atos normativos, parâmetros](../assets/screenshots/admin/institucional.png)
 
 - Veja a hierarquia: MGI → SEGES → CGPGD / CGTI
 - Veja o ato de autorização (Portaria MGI nº 001/2023)

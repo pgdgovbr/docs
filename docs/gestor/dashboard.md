@@ -27,6 +27,8 @@ O dashboard destaca situações que precisam de ação:
 
 ## Relatórios disponíveis
 
+![Painel de relatórios com cards de indicadores disponíveis](../assets/screenshots/gestor/relatorios.png)
+
 No menu **Relatórios** (`/relatorios`), você acessa:
 
 - **Servidores sem Plano de Trabalho** — lista com nome, unidade e chefia responsável

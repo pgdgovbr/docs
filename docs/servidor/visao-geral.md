@@ -26,6 +26,10 @@ Ao fazer login, você vê o **Dashboard** com:
 - **Última avaliação** — nota e data da avaliação mais recente
 - **Notificações recentes** — prazos, avaliações publicadas, respostas a recursos
 
+Acesse o sino no canto superior para ver todas as notificações:
+
+![Lista de notificações do servidor](../assets/screenshots/servidor/notificacoes.png)
+
 ## Seus prazos
 
 Fique atento a dois prazos principais:
