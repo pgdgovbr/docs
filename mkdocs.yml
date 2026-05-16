@@ -45,6 +45,7 @@ nav:
   - O que é o PGD Libre: sobre/pgd-libre.md
   - Conceitos do PGD:
     - O Programa de Gestão: conceitos/programa.md
+    - Pactuação bilateral do Plano: conceitos/pactuacao-bilateral.md
     - Papéis e responsabilidades: conceitos/papeis.md
     - Glossário: conceitos/glossario.md
   - Experimente a Demo:
@@ -54,6 +55,8 @@ nav:
     - Jornada do Gestor e Admin: demo/jornada-gestor.md
   - Sou Servidor:
     - Visão geral do papel: servidor/visao-geral.md
+    - Criar meu Plano de Trabalho: servidor/criar-plano.md
+    - Revisar plano ajustado pela chefia: servidor/revisar-plano.md
     - Meu Plano de Trabalho: servidor/meu-plano.md
     - Registrar Execução: servidor/registrar-execucao.md
     - Minhas Avaliações: servidor/avaliacoes.md
@@ -62,9 +65,10 @@ nav:
   - Sou Chefia Imediata:
     - Visão geral do papel: chefia/visao-geral.md
     - Minha Equipe: chefia/minha-equipe.md
+    - Revisar e assinar Plano de Trabalho: chefia/revisar-plano.md
     - Avaliar Registros: chefia/avaliar-registros.md
     - Responder um Recurso: chefia/responder-recurso.md
-    - Criar Plano de Trabalho: chefia/criar-plano.md
+    - Criar Plano de Trabalho (exceção): chefia/criar-plano-excecao.md
     - Emitir Convocação: chefia/emitir-convocacao.md
     - Referência rápida: chefia/referencia-rapida.md
   - Sou Gestor de Unidade:
@@ -72,3 +76,4 @@ nav:
     - Dashboard e KPIs: gestor/dashboard.md
     - Aprovar Planos de Entregas: gestor/aprovar-planos.md
     - Painel de Conformidade: gestor/conformidade.md
+  # TODO: adicionar seção "Mobile" quando subagente B gerar screenshots mobile (postergado nesta leva).
