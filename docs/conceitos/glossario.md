@@ -27,6 +27,7 @@ Termos usados no PGD Libre e no Programa de Gestão e Desempenho.
 **Modalidade de execução** — Como o servidor trabalha: `Teletrabalho Integral`, `Teletrabalho Parcial` ou `Presencial`.
 
 **Nota de avaliação** — Escala de 1 a 5 usada pela chefia para avaliar um período:
+
 | Nota | Classificação |
 |---|---|
 | 1 | Excepcional |
