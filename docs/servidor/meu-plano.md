@@ -1,12 +1,21 @@
 # Meu Plano de Trabalho
 
-O **Plano de Trabalho** é o documento que define quais atividades você vai executar e em que proporção. Ele é criado pela sua chefia e aprovado antes de você começar a trabalhar sob o PGD.
+O **Plano de Trabalho** é o documento que define quais atividades você vai executar e em que proporção. No PGD Libre, ele é **pactuado** entre você e sua chefia: você propõe, ela revisa e ambos assinam.
 
 ## Como acessar
 
 Menu superior → **Meu Plano** (ou acesse `/meu-plano` diretamente)
 
-## O que você encontra lá
+## Quando você não tem plano ainda
+
+Se você ainda não pactuou um plano, a tela aparece em **estado vazio** com dois caminhos:
+
+![Tela Meu Plano em estado vazio com dois CTAs](../assets/screenshots/servidor/meu-plano-vazio.png)
+
+- **Criar do zero** — abre o wizard `/meu-plano/criar` em 5 passos. → [Guia completo](criar-plano.md)
+- **Clonar plano anterior** — disponível se você já teve plano concluído. Copia contribuições, critérios e carga horária para um novo plano em rascunho. → [Como clonar](criar-plano.md#reaproveitar-um-plano-anterior-clonar)
+
+## O que você encontra quando tem plano ativo
 
 ![Tela Meu Plano com contribuições e histórico de períodos](../assets/screenshots/servidor/meu-plano.png)
 
@@ -14,7 +23,7 @@ Menu superior → **Meu Plano** (ou acesse `/meu-plano` diretamente)
 
 | Campo | O que significa |
 |---|---|
-| **Status** | Em execução / Aprovado / Concluído / Avaliado |
+| **Status** | Estado da pactuação ou execução (ver tabela abaixo) |
 | **Modalidade** | Teletrabalho Integral, Parcial ou Presencial |
 | **Período** | Data de início e fim do plano |
 | **Unidade** | Sua unidade de execução (ex.: CGPGD) |
@@ -43,18 +52,28 @@ Para cada período, você vê:
 - **Nota e justificativa** da chefia (após avaliação)
 - **Recurso** (se você contestou)
 
-## Status do plano
+## Estados de pactuação
 
-| Status | Significado |
-|---|---|
-| **Aprovado** | Plano criado e aprovado, mas o período ainda não começou |
-| **Em execução** | Você está trabalhando sob este plano |
-| **Concluído** | O período do plano encerrou; aguardando avaliação final |
-| **Avaliado** | Todos os períodos foram avaliados e encerrados |
+Antes de o plano entrar em execução, ele passa por estados de pactuação:
+
+| Estado | O que significa | O que você pode fazer |
+|---|---|---|
+| **Rascunho (você)** | Você está elaborando o plano | Editar livremente; assinar e enviar quando pronto |
+| **Aguardando chefia** | Você enviou; chefia precisa revisar e assinar | Aguardar; pode cancelar se quiser refazer |
+| **Aguardando você** | Chefia ajustou e assinou; falta sua assinatura | [Revisar o que mudou e assinar](revisar-plano.md) (ou devolver) |
+| **Em execução** | Plano pactuado e ativo | Registrar execução mensal |
+| **Concluído** | O período encerrou; aguardando avaliação final | Acompanhar avaliações |
+| **Avaliado** | Todos os períodos foram avaliados | Histórico (pode clonar para o próximo plano) |
+
+→ [Diagrama completo de estados](../conceitos/pactuacao-bilateral.md)
 
 ## Quando seu plano não aparece
 
-Se você acessar Meu Plano e não ver nenhum plano ativo, significa que sua chefia ainda não criou ou aprovou um plano para você. Entre em contato com ela.
+Se você acessa **Meu Plano** e a tela está em estado vazio, é porque você ainda não tem plano vigente. **No fluxo padrão, é você quem cria** — não precisa esperar a chefia.
+
+→ [Criar meu Plano de Trabalho](criar-plano.md)
+
+Em casos excepcionais (servidor recém-chegado, ausência prolongada), a chefia pode criar o plano para você. Nesse caso, você receberá uma notificação para revisar e assinar.
 
 !!! tip "Próximo passo"
-    Quando o período atual estiver aberto, você verá o botão **"Registrar execução"**. [Saiba como registrar →](registrar-execucao.md)
+    Quando o plano estiver pactuado e o período atual aberto, você verá o botão **"Registrar execução"**. [Saiba como registrar →](registrar-execucao.md)

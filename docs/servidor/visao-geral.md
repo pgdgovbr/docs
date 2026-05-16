@@ -1,19 +1,20 @@
 # Visão geral — Servidor
 
-Como servidor no PGD Libre, você executa atividades conforme seu **Plano de Trabalho** e registra mensalmente o que foi feito.
+Como servidor no PGD Libre, **você é o autor do seu Plano de Trabalho** — propõe o que vai fazer, e a chefia revisa e assina junto com você. Depois, executa as atividades e registra mensalmente.
 
 ## O que você faz no sistema
 
 ```mermaid
 graph LR
-    A[Recebe o<br/>Plano de Trabalho] --> B[Executa as<br/>atividades do mês]
-    B --> C[Registra a execução<br/>no sistema]
-    C --> D[Aguarda avaliação<br/>da chefia]
-    D --> E{Concorda com<br/>a nota?}
-    E -->|Sim| F[Período encerrado]
-    E -->|Não| G[Contesta<br/>recurso]
-    G --> H[Aguarda resposta<br/>da chefia]
-    H --> F
+    A[Você cria seu<br/>Plano de Trabalho] --> B[Você assina e envia<br/>para a chefia]
+    B --> C[Chefia revisa<br/>e assina]
+    C --> D[Plano em execução]
+    D --> E[Você executa<br/>e registra]
+    E --> F[Chefia avalia]
+    F --> G{Concorda?}
+    G -->|Sim| H[Período encerrado]
+    G -->|Não| I[Recurso]
+    I --> H
 ```
 
 ## Sua tela principal
@@ -22,6 +23,7 @@ graph LR
 
 Ao fazer login, você vê o **Dashboard** com:
 
+- **Aguardando sua ação** — destaque para planos em rascunho ou aguardando sua assinatura
 - **Plano de Trabalho ativo** — status, modalidade e dias restantes para o próximo registro
 - **Última avaliação** — nota e data da avaliação mais recente
 - **Notificações recentes** — prazos, avaliações publicadas, respostas a recursos
@@ -44,7 +46,9 @@ Fique atento a dois prazos principais:
 
 ## Guias disponíveis
 
-- [Meu Plano de Trabalho](meu-plano.md) — como entender seu plano, contribuições e status
+- [Criar meu Plano de Trabalho](criar-plano.md) — passo a passo do wizard, incluindo clonagem de plano anterior
+- [Revisar plano ajustado pela chefia](revisar-plano.md) — o que fazer quando a chefia ajusta e devolve
+- [Meu Plano de Trabalho](meu-plano.md) — como entender seu plano, contribuições e estados de pactuação
 - [Registrar Execução](registrar-execucao.md) — passo a passo para enviar o registro mensal
 - [Minhas Avaliações](avaliacoes.md) — o que cada nota significa e como ver o histórico
 - [Contestar uma Avaliação](contestar-avaliacao.md) — como abrir e acompanhar um recurso

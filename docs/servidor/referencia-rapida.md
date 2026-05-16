@@ -6,6 +6,10 @@ Consulta rápida para as ações mais comuns do dia a dia.
 
 | O que fazer | Onde | Caminho |
 |---|---|---|
+| Criar meu plano | Meu Plano → "Criar do zero" | `/meu-plano/criar` |
+| Clonar plano anterior | Meu Plano → "Clonar plano anterior" | (abre modal) |
+| Editar rascunho | Meu Plano → meu plano → "Editar" | `/meu-plano/<id>/editar` |
+| Revisar ajuste da chefia | Notificação → "Revisar" | `/meu-plano/<id>/revisar` |
 | Ver meu plano ativo | Menu → Meu Plano | `/meu-plano` |
 | Registrar execução do mês | Meu Plano → "Registrar execução" | `/meu-plano/registrar` |
 | Ver avaliação recebida | Meu Plano → clicar no período | `/meu-plano/avaliacao/<id>` |
@@ -33,10 +37,13 @@ Consulta rápida para as ações mais comuns do dia a dia.
 
 | Status | Significa |
 |---|---|
-| Aprovado | Plano criado, ainda não iniciado |
-| Em execução | Você está trabalhando sob este plano |
-| Concluído | Período encerrado, aguardando avaliação final |
+| Rascunho (você) | Você está elaborando; pode editar livremente |
+| Aguardando chefia | Você assinou e enviou; chefia precisa revisar e assinar |
+| Aguardando você | Chefia ajustou; você precisa revisar e assinar |
+| Em execução | Plano pactuado e ativo |
+| Concluído | Período encerrado; aguardando avaliação final |
 | Avaliado | Todos os períodos foram encerrados |
+| Cancelado | Plano cancelado por uma das partes |
 
 ## Status dos períodos avaliativos
 
@@ -51,6 +58,6 @@ Consulta rápida para as ações mais comuns do dia a dia.
 
 | Cor | Situação |
 |---|---|
-| 🔴 Vermelho | Prazo vencido ou vence hoje |
-| 🟡 Amarelo | Menos de 7 dias para o prazo |
-| 🟢 Verde | Dentro do prazo |
+| Vermelho | Prazo vencido ou vence hoje |
+| Amarelo | Menos de 7 dias para o prazo |
+| Verde | Dentro do prazo |
