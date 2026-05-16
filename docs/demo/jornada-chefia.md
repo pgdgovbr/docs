@@ -1,93 +1,162 @@
 # Jornada da Chefia na Demo
 
-Explore as funcionalidades da chefia imediata usando a persona **Carlos Souza** (`chefe1@pgd-demo.gov.br`), chefia da CGPGD.
+Explore as funcionalidades da chefia imediata com personas que cobrem o novo fluxo de pactuação bilateral.
 
-[Faça login como Carlos →](acesso.md)
+| Persona | Email | Estado interessante |
+|---|---|---|
+| Carlos Souza | `chefe1@pgd-demo.gov.br` | CGPGD; tem PT do Felipe ajustado pendente, recurso e avaliação |
+| Beatriz Lima | `chefe2@pgd-demo.gov.br` | CGTI; PT do Pedro aguardando assinatura dela |
+
+[Faça login →](acesso.md)
 
 ---
 
-## Jornada 3 — Avaliar registro pendente
+## Jornada 3a — Revisar e assinar PT do servidor
 
-**Situação:** João Santos registrou a execução do mês anterior. O registro está aguardando avaliação de Carlos.
+**Persona:** Beatriz Lima (`chefe2@pgd-demo.gov.br`)
+
+**Situação:** Pedro Alves enviou um Plano de Trabalho. Beatriz precisa revisar e assinar.
 
 ### No dashboard (`/`)
 
-![Dashboard de Carlos Souza com alertas de equipe](../assets/screenshots/demo/dashboard-chefia.png)
+![Dashboard da chefia com card "X PTs aguardando sua assinatura"](../assets/screenshots/chefia/dashboard-aguardando.png)
 
-- KPIs: 4 servidores na equipe, **1 avaliação pendente**, 3 planos em execução
-- Alerta de recurso pendente (Ana Silva)
+Beatriz vê o card **"Aguardando sua ação"** com a contagem de planos pendentes.
 
-### Acessando a equipe (`/equipe`)
+### Na tela Equipe (`/equipe`)
 
-1. Clique em **Equipe** no menu
-2. Veja a tabela: Ana, João, Carla e Lucas
-3. **Lucas** aparece com badge "Sem PT" (sem Plano de Trabalho)
-4. **João** aparece com indicador de registro pendente de avaliação
+![Tela Equipe com banner de pendências e tabela com badges V2](../assets/screenshots/chefia/equipe-banner-pendentes.png)
 
-### Avaliando o registro de João
+- **Banner consolidado** no topo: "1 plano aguardando sua assinatura" + botão "Ver primeiro pendente"
+- Pedro aparece com badge **"Aguardando sua assinatura"** e botão direto **"Revisar e assinar"**
 
-1. Clique no nome de João → veja o Plano de Trabalho dele
-2. Veja as contribuições: 60% relatórios, 20% gestão, 20% CGTI
-3. Clique no período ARE-JOAO-001 com status "Registrado — aguardando avaliação"
-4. Clique em **"Avaliar"**
-5. Selecione a nota (1–5) usando o seletor visual
-6. Adicione justificativa (obrigatória para notas 1, 4 e 5)
-7. Confirme → João recebe notificação de avaliação realizada
+### Revisando o plano (`/equipe/planos-trabalho/<id>/revisar`)
+
+![Tela de revisar PT do servidor com leitura, timeline e card de assinatura](../assets/screenshots/chefia/revisar-pt.png)
+
+A tela mostra:
+
+- Plano em modo leitura (período, carga horária, critérios, contribuições)
+- Timeline de edições do servidor
+- Card de assinatura com 3 checks
+
+### Assinando
+
+![Card de assinatura com 3 checkboxes e botão habilitado](../assets/screenshots/chefia/assinatura-card.png)
+
+1. Beatriz marca os 3 checks:
+   - Li e entendi o conteúdo do Plano de Trabalho.
+   - Concordo com as contribuições, percentuais e critérios.
+   - Estou ciente de que esta assinatura tem valor formal de pactuação.
+2. Clica em **"Assinar e ativar plano"**
+
+**Pós-condição:** plano vai para **"Em execução"**. Pedro recebe notificação.
+
+→ [Guia completo de revisão](../chefia/revisar-plano.md)
 
 ---
 
-## Jornada 4 — Responder um recurso
+## Jornada 3b — Devolver para ajustes
+
+**Persona:** Beatriz Lima — revisando o mesmo PT do Pedro
+
+**Situação:** Em vez de assinar, Beatriz vê que faltou detalhe nas descrições de contribuição.
+
+1. Em `/equipe/planos-trabalho/<id>/revisar`, clica em **"Devolver para ajustes"**
+2. Adiciona uma justificativa: _"Por favor, detalhar a contribuição de 'gestão' indicando o tipo de atividade."_
+3. Confirma
+
+**Pós-condição:** plano volta para **"Rascunho do servidor"**. A assinatura prévia do Pedro (se houvesse) é zerada — ele precisa editar e reassinar.
+
+---
+
+## Jornada 3c — Ajustar diretamente
+
+**Persona:** Beatriz Lima — fluxo alternativo
+
+**Situação:** Beatriz quer corrigir um detalhe operacional sem devolver para o servidor.
+
+1. Em `/equipe/planos-trabalho/<id>/revisar`, clica em **"Ajustar"**
+2. Vai para `/equipe/planos-trabalho/<id>/editar`
+3. Faz os ajustes (ex.: corrige a carga horária)
+4. Clica em **"Assinar e enviar para servidor"**
+
+**Pós-condição:** plano vai para **"Aguardando assinatura do servidor"**. Pedro vê o diff "A chefia ajustou X campos" em `/meu-plano/<id>/revisar` e precisa assinar a nova versão.
+
+---
+
+## Jornada 4 — Avaliar registro pendente
+
+**Persona:** Carlos Souza (`chefe1@pgd-demo.gov.br`)
+
+**Situação:** João Santos registrou a execução do mês anterior. Aguarda avaliação.
+
+1. **Equipe** → clicar em João
+2. Acessar o Plano de Trabalho dele
+3. Clicar no período ARE-JOAO-001 com status "Registrado — aguardando avaliação"
+4. Clicar em **"Avaliar"**
+5. Selecionar a nota (1–5) com o seletor visual
+6. Adicionar justificativa (obrigatória para notas 1, 4 e 5)
+7. Confirmar → João recebe notificação
+
+---
+
+## Jornada 5 — Responder um recurso
+
+**Persona:** Carlos Souza
 
 **Situação:** Ana contestou a nota 4. Carlos tem uma notificação de recurso aberto.
 
-1. No dashboard, veja a notificação de recurso de Ana
-2. Clique no link → abre a ARE-ANA-002
-3. Leia o texto do recurso de Ana
-4. Escolha: **"Acatar"** (revisa a nota) ou **"Não acatar"** (mantém com justificativa)
-5. Se não acatar, adicione uma justificativa detalhada
-6. Confirme → Ana recebe notificação da resposta
-
----
-
-## Jornada 5 — Criar Plano de Trabalho para Lucas
-
-**Situação:** Lucas Ramos está na equipe sem Plano de Trabalho vigente.
-
-1. Na tela de equipe, clique em **Lucas Ramos**
-2. Veja o badge "Sem Plano de Trabalho"
-3. Clique em **"Criar Plano de Trabalho"** → `/equipe/planos-trabalho/novo`
-
-### Wizard de criação (5 passos)
-
-| Passo | O que fazer |
-|---|---|
-| 1. Participante & período | Selecionar Lucas; definir data de início e fim |
-| 2. Carga horária | Informar total de horas disponíveis no período |
-| 3. Critérios de avaliação | Descrever os critérios que serão usados |
-| 4. Contribuições | Adicionar atividades e percentuais (soma = 100%) |
-| 5. Revisão e envio | Conferir tudo e enviar |
-
-**O que acontece:** Lucas recebe notificação e o plano fica com status "Aprovado".
+1. Dashboard → ver notificação de recurso
+2. Clicar no link → abre a ARE-ANA-002
+3. Ler o texto do recurso de Ana
+4. Escolher: **Acatar** (revisa a nota) ou **Não acatar** (mantém com justificativa)
+5. Confirmar → Ana recebe notificação da resposta
 
 ---
 
 ## Jornada 6 — Emitir convocação
 
-**Situação:** João está em teletrabalho integral. Carlos precisa convocá-lo para uma reunião presencial.
+**Persona:** Carlos Souza
+
+**Situação:** João está em teletrabalho integral. Reunião presencial necessária.
 
 !!! info "Na demo, já existe uma convocação"
     A convocação de João já foi emitida (status pendente). Esta jornada mostra o fluxo de criação.
 
-1. Na tela de equipe, clique em **João Santos**
-2. Clique em **"Convocar"** (ou acesse o menu de convocações)
-3. Preencha: data, horário, local, período presencial, motivo
-4. O sistema verifica se o prazo mínimo de 5 dias é respeitado
-5. Confirme → João recebe notificação
+1. **Equipe** → clicar em João
+2. Clicar em **"Convocar"**
+3. Preencher: data, horário, local, período presencial, motivo
+4. Sistema verifica prazo mínimo de 5 dias
+5. Confirmar → João recebe notificação
+
+---
+
+## Jornada 7 — Criar PT (caso excepcional)
+
+**Persona:** Carlos Souza
+
+!!! warning "Este é o caminho de exceção"
+    O fluxo padrão é o próprio servidor criar. Use este wizard apenas quando o servidor não pode propor (recém-chegado, ausente prolongado).
+
+1. **Equipe** → clicar no servidor → **"Criar Plano de Trabalho"**
+2. **Passo 0 — Confirmar exceção**:
+
+   ![Wizard passo 0: card de confirmação de exceção](../assets/screenshots/chefia/novo-pt-excecao.png)
+
+   Selecionar o motivo da exceção (servidor recém-chegado, ausência prolongada, outro)
+
+3. **Passos 1–5** — preencher período, carga horária, critérios, contribuições
+4. **Passo 5 — Revisão**: clicar em **"Assinar e enviar para servidor"**
+
+**Pós-condição:** plano vai para **"Aguardando assinatura do servidor"**. Só entra em execução depois que o servidor assinar também.
+
+→ [Guia completo](../chefia/criar-plano-excecao.md)
 
 ---
 
 ## O que explorar também
 
-- **[Guia completo de avaliação →](../chefia/avaliar-registros.md)**
-- **[Como responder um recurso →](../chefia/responder-recurso.md)**
-- **[Como criar um Plano de Trabalho →](../chefia/criar-plano.md)**
+- **[Guia de revisar e assinar →](../chefia/revisar-plano.md)** — fluxo padrão
+- **[Guia de avaliar registros →](../chefia/avaliar-registros.md)**
+- **[Pactuação bilateral →](../conceitos/pactuacao-bilateral.md)**

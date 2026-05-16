@@ -15,7 +15,7 @@ Muitos órgãos gerenciam o PGD em planilhas Excel, e-mails ou sistemas internos
 
 | Funcionalidade | O que você ganha |
 |---|---|
-| **Planos de trabalho** | Criação guiada com wizard passo a passo |
+| **Planos de trabalho** | Criação guiada com wizard passo a passo, com pactuação bilateral — servidor propõe, chefia revisa e assina |
 | **Registro de execução** | Servidor registra mensalmente; prazo automático |
 | **Avaliação e recurso** | Fluxo completo: nota 1–5, contestação, prazo legal |
 | **Gestão de equipe** | Chefe vê KPIs da equipe em tempo real |
