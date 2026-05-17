@@ -22,6 +22,9 @@ POST http://localhost:8000/auth/dev-login?email=<EMAIL>&name=<NOME>&role=<PAPEL>
 | João Santos | servidor2@pgd-demo.gov.br | servidor |
 | Carla Mendes | servidor3@pgd-demo.gov.br | servidor |
 | Lucas Ramos | servidor4@pgd-demo.gov.br | servidor |
+| Pedro Alves | servidor5@pgd-demo.gov.br | servidor |
+| Felipe Costa | servidor6@pgd-demo.gov.br | servidor |
+| Marta Silva | servidor7@pgd-demo.gov.br | servidor |
 | Carlos Souza | chefe1@pgd-demo.gov.br | chefe_imediato |
 | Beatriz Lima | chefe2@pgd-demo.gov.br | chefe_imediato |
 | Maria Fernanda | gestor@pgd-demo.gov.br | gestor_unidade |
@@ -37,211 +40,279 @@ POST http://localhost:8000/auth/dev-login?email=<EMAIL>&name=<NOME>&role=<PAPEL>
 MGI — Ministério da Gestão e da Inovação
   └── SEGES — Secretaria de Gestão e Inovação
         ├── CGPGD — Coord-Geral de Gestão do PGD  (chefe: Carlos Souza)
-        │     ├── Ana Silva      — Teletrabalho Parcial
+        │     ├── Ana Silva      — Teletrabalho Parcial (plano em execução; plano anterior concluído)
         │     ├── João Santos    — Teletrabalho Integral
         │     ├── Carla Mendes   — Presencial
-        │     └── Lucas Ramos    — Teletrabalho Parcial (sem plano de trabalho)
+        │     ├── Lucas Ramos    — Teletrabalho Parcial (plano em rascunho)
+        │     ├── Felipe Costa   — Teletrabalho Parcial (chefia ajustou, aguarda sua assinatura)
+        │     └── Marta Silva    — Teletrabalho Parcial (sem plano)
         └── CGTI — Coord-Geral de TI               (chefe: Beatriz Lima)
-              └── Pedro Alves    — Teletrabalho Parcial
+              └── Pedro Alves    — Teletrabalho Parcial (plano aguardando assinatura da chefia)
 ```
 
 ---
 
-## Jornada 1 — Servidor: Ver meu plano e registrar execução
+## Jornada 0 — Servidor: Criar meu Plano de Trabalho
+
+**Persona:** Marta Silva (`servidor7@pgd-demo.gov.br`)
+
+**Pré-condição:** Marta entrou no PGD e não tem plano vigente.
+
+### Passos
+
+1. **Login** → Dashboard (`/`)
+2. **Meu Plano** (`/meu-plano`) → estado vazio com dois CTAs (Criar do zero, Clonar)
+3. **Criar do zero** → wizard `/meu-plano/criar`:
+   - Step 1: período + vínculo com PE
+   - Step 2: carga horária
+   - Step 3: critérios de avaliação
+   - Step 4: contribuições (somando 100%)
+   - Step 5: revisão + **Assinar e enviar para chefia**
+4. Marta marca os 3 checks da assinatura e envia
+
+**Pós-condição:** plano em **"Aguardando assinatura da chefia"**; Carlos recebe notificação.
+
+---
+
+## Jornada 1a — Servidor: Clonar plano anterior
 
 **Persona:** Ana Silva (`servidor1@pgd-demo.gov.br`)
 
-**Pré-condição:** Ana tem um Plano de Trabalho ativo (em execução) com 3 períodos avaliativos.
+**Pré-condição:** Ana tem PT em execução + PT anterior em CONCLUIDO.
 
 ### Passos
 
-1. **Login** → Dashboard (`/`)
-   - Vê o card "Plano de Trabalho ativo" com a UrgencyPill mostrando dias restantes
-   - Vê a última avaliação recebida (nota 4 — inadequado, com recurso em aberto)
-   - Vê notificação de avaliação realizada
-
-2. **Navegar para Meu Plano** → `/meu-plano`
-   - Vê o PlanoTrabalho 2025 da CGPGD
-   - Vê as 2 contribuições: 70% desenvolvimento + 30% suporte
-   - Vê o histórico de 3 períodos avaliativos
-
-3. **Clicar em "Registrar execução"** → `/meu-plano/registrar`
-   - Preenche o período atual (aberto, sem registro)
-   - Descreve o que fez no mês
-   - (Opcional) Adiciona ocorrências
-   - Confirma e envia
-
-4. **Ver avaliação contestada** → `/meu-plano/avaliacao/ARE-ANA-002`
-   - Vê a avaliação nota 4 do período anterior
-   - Vê o recurso que ela já submeteu (3 dias atrás)
-   - Aguarda resposta do chefe (prazo: 7 dias)
-
-**Pós-condição:** Registro do período atual enviado; recurso do período anterior aguardando resposta.
+1. **Meu Plano** → clica em **"Clonar plano anterior"**
+2. Modal abre listando PTs anteriores
+3. Seleciona o PT-2024-ANA-002, define novas datas
+4. Clica em **"Clonar e editar"** → vai para `/meu-plano/<novo_id>/editar`
+5. Novo PT em rascunho com tudo copiado; ajusta o que precisa
+6. Segue o fluxo padrão (assinar e enviar)
 
 ---
 
-## Jornada 2 — Servidor: Contestar avaliação (recurso)
+## Jornada 1b — Servidor: Editar meu rascunho
 
-**Persona:** Ana Silva — mas usando a ARE-ANA-002 (nota 4, recurso já aberto na demo)
+**Persona:** Lucas Ramos (`servidor4@pgd-demo.gov.br`)
 
-> Na demo, o recurso já foi submetido. Para demonstrar o fluxo completo de contestação, use um usuário secundário (João — nota do período anterior ainda sem recurso se quiser simular).
-
-**Pré-condição:** Ana recebeu nota 4 em um período avaliativo. Está dentro da janela de 10 dias.
+**Pré-condição:** Lucas tem PT em RASCUNHO_PARTICIPANTE com histórico de edições.
 
 ### Passos
 
-1. **Meu Plano** → clicar no período ARE-ANA-002
-2. Vê a avaliação nota 4 com justificativa da chefia
-3. Clica em **"Contestar avaliação"**
-4. Preenche o texto do recurso explicando a situação
-5. Confirma envio → notificação gerada para o chefe
+1. **Meu Plano** → vê seu rascunho com botão "Editar"
+2. Vai para `/meu-plano/<id>/editar`
+3. Vê OwnershipBanner, auto-save e timeline de edições
+4. Faz ajustes, salva automaticamente
+5. Quando pronto, clica em **"Assinar e enviar para chefia"**
 
 ---
 
-## Jornada 3 — Chefe Imediato: Avaliar registro pendente
+## Jornada 1c — Servidor: Revisar ajuste da chefia e assinar
+
+**Persona:** Felipe Costa (`servidor6@pgd-demo.gov.br`)
+
+**Pré-condição:** Felipe tem PT em AGUARDANDO_ASSINATURA_PARTICIPANTE (chefia ajustou + assinou).
+
+### Passos
+
+1. **Login** → Dashboard com card "Aguardando sua ação" destacado
+2. Acessa `/meu-plano/<id>/revisar`
+3. Vê:
+   - Banner "A chefia ajustou X campos"
+   - Timeline de edições (criação → assinatura → ajuste chefia → assinatura chefia)
+   - Card de assinatura com 3 checks
+4. Marca os 3 checks → clica em **"Assinar e ativar plano"**
+
+**Pós-condição:** PT em **"Em execução"**; pode começar a registrar.
+
+**Variantes:**
+- **Devolver para ajustes** → PT volta para "Rascunho da chefia" (zera assinatura dela)
+- **Cancelar plano** → PT vai para "Cancelado"
+
+---
+
+## Jornada 2 — Servidor: Registrar execução
+
+**Persona:** Ana Silva — PT em execução
+
+**Pré-condição:** Período avaliativo atual aberto.
+
+### Passos
+
+1. **Meu Plano** → clica em **"Registrar execução"** → `/meu-plano/registrar`
+2. Preenche descrição do que foi feito no mês
+3. (Opcional) Adiciona ocorrências
+4. **Enviar registro**
+
+---
+
+## Jornada 3 — Servidor: Contestar avaliação (recurso)
+
+**Persona:** Ana Silva — ARE-ANA-002 (recurso já aberto na demo)
+
+### Passos (fluxo completo)
+
+1. **Meu Plano** → clica no período avaliativo
+2. Vê a nota e justificativa
+3. Dentro dos 10 dias, clica em **"Contestar avaliação"**
+4. Escreve o texto do recurso
+5. **Enviar recurso** → chefia tem 7 dias para responder
+
+---
+
+## Jornada 4a — Chefia: Revisar e assinar PT do servidor
+
+**Persona:** Beatriz Lima (`chefe2@pgd-demo.gov.br`)
+
+**Pré-condição:** Pedro Alves enviou PT (status AGUARDANDO_ASSINATURA_CHEFIA).
+
+### Passos
+
+1. **Login** → Dashboard com card "X PTs aguardando sua assinatura"
+2. **Equipe** → banner consolidado de pendências + botão "Ver primeiro pendente"
+3. Clica em **"Revisar e assinar"** → `/equipe/planos-trabalho/<id>/revisar`
+4. Vê:
+   - Plano em modo leitura
+   - Timeline de edições do servidor
+   - Card de assinatura com 3 checks
+5. Marca os 3 checks → clica em **"Assinar e ativar plano"**
+
+**Pós-condição:** PT em **"Em execução"**; Pedro recebe notificação.
+
+---
+
+## Jornada 4b — Chefia: Devolver para ajustes
+
+**Persona:** Beatriz Lima (mesma situação)
+
+### Passos
+
+1. Em `/equipe/planos-trabalho/<id>/revisar`, clica em **"Devolver para ajustes"**
+2. Adiciona justificativa explicando o que precisa mudar
+3. Confirma → PT volta para **"Rascunho do servidor"**
+
+---
+
+## Jornada 4c — Chefia: Ajustar diretamente
+
+**Persona:** Beatriz Lima (mesma situação)
+
+### Passos
+
+1. Clica em **"Ajustar"** → `/equipe/planos-trabalho/<id>/editar`
+2. Faz os ajustes
+3. Clica em **"Assinar e enviar para servidor"**
+4. PT vai para **"Aguardando assinatura do servidor"**; Pedro precisa reassinar
+
+---
+
+## Jornada 5 — Chefia: Avaliar registro pendente
 
 **Persona:** Carlos Souza (`chefe1@pgd-demo.gov.br`)
 
-**Pré-condição:** João Santos registrou a execução do mês anterior. Aguarda avaliação.
+**Pré-condição:** João Santos registrou a execução do mês anterior.
 
 ### Passos
 
-1. **Login** → Dashboard (`/`)
-   - Vê KPIs: 4 servidores na equipe, 1 avaliação pendente, 3 planos em execução
-   - Vê alerta de recurso pendente (Ana Silva)
-
-2. **Ir para Equipe** → `/equipe`
-   - Vê tabela com Ana, João, Carla e Lucas
-   - Lucas aparece sem plano de trabalho (badge "Sem PT")
-   - João aparece com indicador de registro pendente
-
-3. **Clicar no PlanoTrabalho de João** → `/equipe/planos-trabalho/PT-2025-JOAO-001`
-   - Vê contribuições de João (60% relatórios, 20% gestão, 20% CGTI)
-   - Vê ARE-JOAO-001 com status "Registrado — aguardando avaliação"
-
-4. **Avaliar ARE-JOAO-001**
-   - Clica em "Avaliar"
-   - Seleciona nota (1–5) com o NotaSelector
-   - Adiciona justificativa se necessário (obrigatória para notas 1, 4, 5)
-   - Confirma → notificação enviada para João
-
-**Pós-condição:** João recebe notificação de avaliação realizada.
+1. **Equipe** → clicar em João
+2. Acessar o PT dele → clicar no período ARE-JOAO-001
+3. Clicar em **"Avaliar"**
+4. Selecionar nota (1–5); adicionar justificativa se obrigatória
+5. Confirmar → João recebe notificação
 
 ---
 
-## Jornada 4 — Chefe Imediato: Responder recurso
+## Jornada 6 — Chefia: Responder recurso
 
 **Persona:** Carlos Souza
 
-**Pré-condição:** Ana contestou a nota 4. Notificação de recurso aberto no dashboard do chefe.
+**Pré-condição:** Ana contestou a nota 4.
 
 ### Passos
 
-1. **Dashboard** → ver notificação de recurso aberto
-2. **Abrir ARE-ANA-002** via link na notificação ou via `/equipe`
-3. Ler o texto do recurso de Ana
-4. Decidir: **Acatar** ou **Não Acatar**
-   - Se acatar: nota é revisada para cima
-   - Se não acatar: adicionar justificativa detalhada
-5. Confirmar → recurso encerrado, Ana notificada
+1. Dashboard → notificação de recurso aberto
+2. Abrir ARE-ANA-002 via link
+3. Ler o recurso
+4. **Acatar** ou **Não acatar** (com justificativa)
+5. Confirmar → Ana é notificada
 
 ---
 
-## Jornada 5 — Chefe Imediato: Criar Plano de Trabalho
+## Jornada 7 — Chefia: Criar PT (caso excepcional)
 
 **Persona:** Carlos Souza
 
-**Pré-condição:** Lucas Ramos está na equipe mas sem Plano de Trabalho.
+!!! warning "Caminho de exceção"
+    O fluxo padrão é o próprio servidor criar.
+
+**Pré-condição:** servidor recém-chegado ou ausente.
 
 ### Passos
 
-1. **Equipe** → clicar em Lucas Ramos
-2. Clicar em **"Criar Plano de Trabalho"** → `/equipe/planos-trabalho/novo`
-3. **Step 1 — Participante & período:** selecionar Lucas, definir datas (início, fim)
-4. **Step 2 — Carga horária:** informar horas disponíveis no período
-5. **Step 3 — Critérios de avaliação:** descrever os critérios que serão usados
-6. **Step 4 — Contribuições:** adicionar atividades e percentuais (devem somar 100%)
-7. **Step 5 — Revisão e envio:** confirmar e enviar para aprovação
-8. Lucas recebe notificação de plano aprovado
+1. **Equipe** → clicar no servidor → **"Criar Plano de Trabalho"**
+2. **Step 0 — Confirmar exceção** — selecionar motivo
+3. **Step 1 — Período**
+4. **Step 2 — Carga horária**
+5. **Step 3 — Critérios de avaliação**
+6. **Step 4 — Contribuições**
+7. **Step 5 — Revisão e envio** → **Assinar e enviar para servidor**
+
+**Pós-condição:** PT em **"Aguardando assinatura do servidor"**; só entra em execução após servidor assinar.
 
 ---
 
-## Jornada 6 — Chefe Imediato: Emitir convocação
+## Jornada 8 — Chefia: Emitir convocação
 
 **Persona:** Carlos Souza
 
-**Pré-condição:** João Santos está em teletrabalho integral. Há reunião presencial necessária.
+**Pré-condição:** João em teletrabalho integral; reunião presencial necessária.
 
-**Estado na demo:** A convocação já foi emitida (status pendente). João ainda não respondeu.
+### Passos
 
-### Passos (fluxo completo, para apresentação)
-
-1. **Equipe** → clicar em João Santos
-2. Clicar em **"Convocar"** ou acessar menu de convocações
-3. Preencher: data de comparecimento, horário, local, período presencial, motivo
-4. Sistema verifica prazo mínimo de antecedência (5 dias) — respeitado ✓
-5. Confirmar → João recebe notificação pelo canal configurado (Teams)
-
-**Estado atual na demo:** João vê a convocação pendente no seu dashboard.
+1. **Equipe** → clicar em João → **"Convocar"**
+2. Preencher data, horário, local, motivo
+3. Sistema valida prazo mínimo de 5 dias
+4. Confirmar → João recebe notificação
 
 ---
 
-## Jornada 7 — Gestor: Aprovar PlanoEntregas
+## Jornada 9 — Gestor: Aprovar PlanoEntregas
 
 **Persona:** Maria Fernanda (`gestor@pgd-demo.gov.br`)
 
-**Pré-condição:** CGTI submeteu um PlanoEntregas aguardando aprovação do nivel_superior.
+**Pré-condição:** CGTI submeteu PE aguardando aprovação.
 
 ### Passos
 
-1. **Login** → Dashboard (`/`)
-   - Vê KPIs consolidados: 5 servidores, 2 planos de entrega, status de sincronização
-
-2. **Painel de conformidade** → `/conformidade`
-   - Vê PlanoEntregas da CGTI com status "Aguardando aprovação"
-   - Vê erros de sincronização para Pedro Alves (CGTI)
-
-3. **Clicar no PlanoEntregas da CGTI**
-   - Vê as 2 entregas planejadas: Sistema de Integração + Dashboard de Monitoramento
-   - Vê datas e metas de cada entrega
-
-4. **Aprovar PlanoEntregas** → PE_CGTI passa para status "Em execução"
-5. Beatriz Lima (chefe CGTI) recebe notificação de PE aprovado
+1. **Painel de conformidade** (`/conformidade`)
+2. Ver PE_CGTI com status "Aguardando aprovação"
+3. Clicar nele → revisar entregas planejadas
+4. Aprovar → PE passa para "Em execução"; Beatriz é notificada
 
 ---
 
-## Jornada 8 — Gestor: Ver relatório de servidores sem plano
+## Jornada 10 — Gestor: Ver relatório de servidores sem plano
 
 **Persona:** Maria Fernanda
 
 ### Passos
 
-1. **Relatórios** → `/relatorios`
+1. **Relatórios** (`/relatorios`)
 2. Clicar em **"Servidores sem Plano de Trabalho"**
-3. Vê Lucas Ramos (CGPGD) listado sem PT
-4. Pode acionar o chefe imediato (Carlos Souza) para criar o PT
+3. Ver Marta Silva listada
+4. No novo workflow, o relatório serve para identificar quem ainda não pactuou (não mais "quem aguarda a chefia criar")
 
 ---
 
-## Jornada 9 — Admin: Ver conformidade e sync
+## Jornada 11 — Admin: Ver conformidade e sync
 
 **Persona:** Roberto Admin (`admin@pgd-demo.gov.br`)
 
 ### Passos
 
-1. **Login** → Dashboard administrativo
-2. **Painel de conformidade** → `/conformidade`
-   - Vê tabela de envios: 5 sucessos, 3 erros (Pedro/CGTI)
-   - Erros: Timeout na API PGD Central (2 tentativas)
-3. **Clicar no erro de Pedro** → `/conformidade/erro/<id>`
-   - Vê detalhes do erro: HTTP 500, mensagem de timeout
-   - Pode acionar reenvio manual
-4. **Administração** → `/admin/participantes`
-   - Lista completa: Ana, João, Carla, Lucas, Pedro
-   - Pode editar dados cadastrais
-5. **Institucional** → `/admin/institucional`
-   - Vê configuração do MGI/SEGES/CGPGD/CGTI
-   - Vê ato de autorização (Portaria MGI nº 001/2023)
+1. **Painel de conformidade** (`/conformidade`) — ver tabela de envios e erros
+2. **Administração** (`/admin/participantes`) — lista completa
+3. **Institucional** (`/admin/institucional`) — ver configuração e ato de autorização
 
 ---
 
@@ -249,19 +320,17 @@ MGI — Ministério da Gestão e da Inovação
 
 | Entidade | Quantidade | Estados |
 |---|---|---|
-| Usuários | 9 | admin, gestor, 2 chefes, 5 servidores |
-| Participantes | 5 | 4 em CGPGD, 1 em CGTI |
-| TCRs | 5 | Todos ATIVO |
+| Usuários | 11 | admin, gestor, 2 chefes, 7 servidores |
+| Participantes | 7 | 6 em CGPGD, 1 em CGTI |
+| TCRs | 7 | Todos ATIVO |
 | PlanoEntregas | 2 | 1 em execução, 1 aguardando aprovação |
-| Entregas | 5 | 3 para CGPGD, 2 para CGTI |
-| PlanoTrabalho | 4 | 3 em execução, 1 aprovado (Pedro) |
-| Contribuições | 9 | Tipos 1, 2 e 3 (cross-unit) |
+| PlanoTrabalho | 7 | 3 em execução, 1 concluído (Ana anterior), 1 aguardando chefia (Pedro), 1 aguardando servidor (Felipe), 1 rascunho (Lucas) |
+| Contribuições | 11 | Tipos 1, 2 e 3 (cross-unit) |
 | AREs | 5 | Encerradas, registrada, com recurso, aberta |
 | Convocações | 1 | Pendente (João) |
 | Afastamentos | 1 | Férias encerradas (Carla) |
-| TermoGuardaEquipamento | 1 | João (TT integral) |
-| RegistroEnvioAPI | 8 | 5 ok, 3 erro |
-| Notificações | 5 | 4 enviadas + 1 de convocação |
+| Notificações | 6 | inclui notificação para Felipe (ajuste da chefia) |
+| AuditLog | 10+ | Timelines sintéticas para Lucas, Felipe e Pedro |
 
 ---
 
@@ -273,6 +342,7 @@ O script `seed_demo.py` calcula todas as datas em relação ao dia de execução
 |---|---|
 | Início do plano | hoje − 180 dias |
 | Fim do plano | hoje + 185 dias |
+| Plano anterior da Ana | hoje−365 a hoje−185 |
 | Período avaliativo −2 | hoje−60 a hoje−31 |
 | Período avaliativo −1 | hoje−30 a hoje−1 |
 | Período atual | hoje a hoje+30 |

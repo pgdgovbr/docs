@@ -1,17 +1,19 @@
 # Visão geral — Chefia Imediata
 
-Como chefia imediata, você gerencia sua equipe direta no PGD: cria os planos de trabalho, avalia os registros mensais e responde aos recursos.
+Como chefia imediata, você acompanha sua equipe direta no PGD: **revisa e assina os Planos de Trabalho propostos pelos servidores**, avalia os registros mensais e responde aos recursos. Criar o PT diretamente passa a ser caso de exceção.
 
 ## O que você faz no sistema
 
 ```mermaid
 graph TD
-    A[Criar Plano de<br/>Trabalho para o servidor] --> B[Servidor executa<br/>e registra]
-    B --> C[Você avalia o<br/>registro com nota 1–5]
-    C --> D{Servidor<br/>contestou?}
-    D -->|Não| E[Período encerrado]
-    D -->|Sim| F[Você responde<br/>ao recurso]
-    F --> E
+    A[Servidor propõe<br/>Plano de Trabalho] --> B[Você revisa<br/>e assina]
+    B --> C[Plano em execução]
+    C --> D[Servidor registra]
+    D --> E[Você avalia<br/>com nota 1–5]
+    E --> F{Servidor<br/>contestou?}
+    F -->|Não| G[Período encerrado]
+    F -->|Sim| H[Você responde<br/>ao recurso]
+    H --> G
 ```
 
 ## Sua tela principal
@@ -20,24 +22,26 @@ graph TD
 
 Ao fazer login, você vê o **Dashboard** com:
 
-- **KPIs da equipe** — total de servidores, avaliações pendentes, recursos em aberto
-- **Alertas de ação** — registros aguardando avaliação, recursos sem resposta
+- **Aguardando sua ação** — planos pendentes de sua assinatura, recursos sem resposta, avaliações pendentes
+- **KPIs da equipe** — total de servidores, planos em execução, planos em pactuação
 - **Plano de Entregas da unidade** — status atual
 
 ## Suas responsabilidades no ciclo
 
 | Quando | O que você faz |
 |---|---|
-| Início do período | Cria ou revisa o Plano de Trabalho de cada servidor |
-| Durante o período | Acompanha a equipe; pode emitir convocações |
-| Ao final do período | Avalia os registros enviados pelos servidores |
-| Após a avaliação | Responde aos recursos, se abertos (prazo: 7 dias) |
+| Servidor envia plano | Revisar, assinar e ativar o plano (ou devolver para ajustes, ou ajustar diretamente) |
+| Durante o período | Acompanhar a equipe; emitir convocações se necessário |
+| Ao final do período | Avaliar os registros enviados pelos servidores |
+| Após a avaliação | Responder aos recursos, se abertos (prazo: 7 dias) |
+| Em casos excepcionais | Criar o Plano de Trabalho diretamente (servidor ausente, recém-chegado) |
 
 ## Guias disponíveis
 
-- [Minha Equipe](minha-equipe.md) — como ver o panorama da equipe e identificar pendências
+- [Minha Equipe](minha-equipe.md) — banner de pendências, badges e como ver o panorama
+- [Revisar e assinar Plano de Trabalho](revisar-plano.md) — fluxo padrão de pactuação **(novo)**
 - [Avaliar Registros](avaliar-registros.md) — como dar nota e justificar
 - [Responder um Recurso](responder-recurso.md) — como lidar com contestações
-- [Criar Plano de Trabalho](criar-plano.md) — wizard passo a passo
+- [Criar Plano de Trabalho (exceção)](criar-plano-excecao.md) — quando o servidor não pode propor
 - [Emitir Convocação](emitir-convocacao.md) — para servidores em teletrabalho integral
 - [Referência rápida](referencia-rapida.md) — atalhos para o dia a dia
