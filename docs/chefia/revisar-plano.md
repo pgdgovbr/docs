@@ -93,6 +93,14 @@ Antes de assinar, confira:
 | **Vínculo com PE** | Está vinculado ao Plano de Entregas vigente da unidade? |
 | **Contribuições** | Refletem o que vocês combinaram em conversa prévia? |
 
+## No celular
+
+A revisão de plano pela chefia funciona igual ao caso do servidor: o card de assinatura fica fixo no rodapé, e a grade de informações se ajusta para 2 colunas.
+
+![Revisar plano de servidor no celular](../assets/screenshots/mobile/chefia/revisar.png){ width="320" }
+
+Dica: ao "Devolver para ajustes" no celular, confirme antes de tocar — a ação zera a assinatura do servidor (se ele já tinha assinado uma versão anterior) e exige que ele reassine.
+
 ## Veja também
 
 - [Minha Equipe](minha-equipe.md) — banner consolidado e badges

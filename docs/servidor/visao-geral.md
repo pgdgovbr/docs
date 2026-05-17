@@ -32,6 +32,12 @@ Acesse o sino no canto superior para ver todas as notificações:
 
 ![Lista de notificações do servidor](../assets/screenshots/servidor/notificacoes.png)
 
+### No celular
+
+O dashboard tem um card destacado no topo quando há plano aguardando sua ação. Tocar no card abre direto a página de revisar.
+
+![Dashboard do servidor no celular com card "aguardando sua ação"](../assets/screenshots/mobile/servidor/dashboard-aguardando.png){ width="320" }
+
 ## Seus prazos
 
 Fique atento a dois prazos principais:

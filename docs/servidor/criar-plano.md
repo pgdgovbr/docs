@@ -135,6 +135,18 @@ Após ajustar o que for necessário, siga o fluxo normal: revisar → "Assinar e
 
 ---
 
+## No celular
+
+O wizard de criação roda igual em mobile — os 5 passos aparecem em coluna, os botões "Voltar" e "Próximo" ficam no rodapé.
+
+![Wizard de criação no celular — passo 1](../assets/screenshots/mobile/servidor/criar-passo1.png){ width="320" }
+
+Na etapa de **contribuições** (passo 4), o teclado virtual pode cobrir o campo de descrição — role a tela após digitar o percentual para ver a lista das contribuições já adicionadas.
+
+![Wizard no celular — passo de contribuições](../assets/screenshots/mobile/servidor/criar-contribuicoes.png){ width="320" }
+
+---
+
 ## Veja também
 
 - [Revisar plano ajustado pela chefia](revisar-plano.md) — quando a chefia ajusta e devolve para você reassinar
