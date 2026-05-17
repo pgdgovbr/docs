@@ -15,6 +15,14 @@ Se você ainda não pactuou um plano, a tela aparece em **estado vazio** com doi
 - **Criar do zero** — abre o wizard `/meu-plano/criar` em 5 passos. → [Guia completo](criar-plano.md)
 - **Clonar plano anterior** — disponível se você já teve plano concluído. Copia contribuições, critérios e carga horária para um novo plano em rascunho. → [Como clonar](criar-plano.md#reaproveitar-um-plano-anterior-clonar)
 
+### No celular
+
+Em telas menores que 640px, os dois CTAs ("Criar do zero" e "Clonar plano anterior") empilham em coluna única para garantir alvos de toque grandes. O card de planos anteriores fica abaixo dos CTAs principais.
+
+![Tela Meu Plano vazio no celular](../assets/screenshots/mobile/servidor/meu-plano-vazio.png){ width="320" }
+
+O modal de clonar (quando você toca em "Clonar plano anterior") ocupa a tela inteira no celular — o conteúdo do plano atual continua acessível ao fechar.
+
 ## O que você encontra quando tem plano ativo
 
 ![Tela Meu Plano com contribuições e histórico de períodos](../assets/screenshots/servidor/meu-plano.png)

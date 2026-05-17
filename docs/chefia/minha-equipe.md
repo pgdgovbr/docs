@@ -67,3 +67,9 @@ No perfil você encontra o Plano de Trabalho ativo com:
 ## Plano de Entregas da unidade
 
 No topo da tela de Equipe, você também vê o **Plano de Entregas** da sua unidade. Ele foi aprovado pelo gestor e define as metas coletivas do período.
+
+## No celular
+
+A lista de equipe passa de 3 colunas para 1 coluna empilhada. A tabela de planos ganha **rolagem horizontal** — toda a informação continua disponível, é só arrastar a tabela para o lado.
+
+![Minha equipe no celular](../assets/screenshots/mobile/chefia/equipe.png){ width="320" }

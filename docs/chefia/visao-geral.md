@@ -45,3 +45,9 @@ Ao fazer login, você vê o **Dashboard** com:
 - [Criar Plano de Trabalho (exceção)](criar-plano-excecao.md) — quando o servidor não pode propor
 - [Emitir Convocação](emitir-convocacao.md) — para servidores em teletrabalho integral
 - [Referência rápida](referencia-rapida.md) — atalhos para o dia a dia
+
+## No celular
+
+A chefia recebe notificações de planos aguardando assinatura e pode revisar do celular. O dashboard tem um banner consolidado no topo quando há pendências.
+
+![Dashboard da chefia no celular com banner de pendências](../assets/screenshots/mobile/chefia/dashboard-aguardando.png){ width="320" }

@@ -86,6 +86,20 @@ Em casos excepcionais (mudança de unidade, afastamento longo, etc.), você pode
 
 → [Como registrar execução](registrar-execucao.md)
 
+## No celular
+
+A página de revisar é o caso mais comum de uso mobile: você recebe a notificação no celular e quer assinar ou devolver sem abrir o computador.
+
+![Página de revisar no celular](../assets/screenshots/mobile/servidor/revisar.png){ width="320" }
+
+**Mudanças específicas no celular:**
+
+- O card "Assinaturas e ação" (com os 3 checkboxes e o botão "Assinar e ativar plano") fica **fixo no rodapé** — você vê a ação principal sem precisar rolar.
+- A grade de KPIs (carga horária, período etc.) passa de 4 para 2 colunas.
+- O bloco "O que mudou desde sua última leitura" empilha cada campo em linha única.
+
+Se preferir devolver para ajustes, a confirmação inline ("isso vai zerar a assinatura da chefia") aparece acima do botão sticky.
+
 ## Veja também
 
 - [Criar meu Plano de Trabalho](criar-plano.md)
