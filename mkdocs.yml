@@ -4,6 +4,9 @@ site_url: https://pgdgovbr.github.io/docs/
 repo_url: https://github.com/pgdgovbr/docs
 repo_name: pgdgovbr/docs
 docs_dir: docs
+copyright: >
+  © PGD Libre — conteúdo licenciado sob
+  <a href="https://creativecommons.org/licenses/by/4.0/deed.pt-br" rel="license" target="_blank">CC BY 4.0</a>
 
 theme:
   name: material
