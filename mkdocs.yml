@@ -1,11 +1,11 @@
-site_name: PGD Libre
-site_description: Guia do usuário do PGD Libre — gestão do Programa de Gestão e Desempenho no serviço público federal
+site_name: PGD Livre
+site_description: Guia do usuário do PGD Livre — gestão do Programa de Gestão e Desempenho no serviço público federal
 site_url: https://pgdgovbr.github.io/docs/
 repo_url: https://github.com/pgdgovbr/docs
 repo_name: pgdgovbr/docs
 docs_dir: docs
 copyright: >
-  © PGD Libre — conteúdo licenciado sob
+  © PGD Livre — conteúdo licenciado sob
   <a href="https://creativecommons.org/licenses/by/4.0/deed.pt-br" rel="license" target="_blank">CC BY 4.0</a>
 
 theme:
@@ -45,7 +45,9 @@ markdown_extensions:
 
 nav:
   - Início: index.md
-  - O que é o PGD Libre: sobre/pgd-libre.md
+  - O que é o PGD Livre:
+    - Visão geral: sobre/pgd-libre.md
+    - Requisitos funcionais cobertos: sobre/requisitos-funcionais.md
   - Conceitos do PGD:
     - O Programa de Gestão: conceitos/programa.md
     - Pactuação bilateral do Plano: conceitos/pactuacao-bilateral.md

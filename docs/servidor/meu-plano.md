@@ -1,6 +1,6 @@
 # Meu Plano de Trabalho
 
-O **Plano de Trabalho** é o documento que define quais atividades você vai executar e em que proporção. No PGD Libre, ele é **pactuado** entre você e sua chefia: você propõe, ela revisa e ambos assinam.
+O **Plano de Trabalho** é o documento que define quais atividades você vai executar e em que proporção. No PGD Livre, ele é **pactuado** entre você e sua chefia: você propõe, ela revisa e ambos assinam.
 
 ## Como acessar
 

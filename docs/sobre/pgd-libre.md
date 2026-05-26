@@ -1,6 +1,6 @@
-# O que é o PGD Libre
+# O que é o PGD Livre
 
-O **PGD Libre** é uma plataforma de gestão do [Programa de Gestão e Desempenho](../conceitos/programa.md) desenvolvida como software livre para o serviço público federal brasileiro.
+O **PGD Livre** é uma plataforma de gestão do [Programa de Gestão e Desempenho](../conceitos/programa.md) desenvolvida como software livre para o serviço público federal brasileiro.
 
 ## O problema que resolve
 
@@ -11,7 +11,7 @@ Muitos órgãos gerenciam o PGD em planilhas Excel, e-mails ou sistemas internos
 - Dificuldade de sincronização com a **API PGD Central** do MGI
 - Falta de visibilidade para gestores e chefias
 
-## O que o PGD Libre oferece
+## O que o PGD Livre oferece
 
 | Funcionalidade | O que você ganha |
 |---|---|
@@ -24,7 +24,7 @@ Muitos órgãos gerenciam o PGD em planilhas Excel, e-mails ou sistemas internos
 
 ## Base legal
 
-O PGD Libre implementa integralmente os requisitos do marco normativo:
+O PGD Livre implementa integralmente os requisitos do marco normativo:
 
 - **Decreto 11.072/2022** — institui o Programa de Gestão e Desempenho
 - **IN SEGES/MGI nº 24/2023** — regulamenta o teletrabalho e o PGD

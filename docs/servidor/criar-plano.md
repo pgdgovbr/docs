@@ -1,6 +1,6 @@
 # Criar meu Plano de Trabalho
 
-No PGD Libre, **você é o autor do seu Plano de Trabalho**. Esta página explica como propor um plano do zero ou reaproveitando um plano anterior.
+No PGD Livre, **você é o autor do seu Plano de Trabalho**. Esta página explica como propor um plano do zero ou reaproveitando um plano anterior.
 
 ## Quando criar um plano
 
