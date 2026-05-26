@@ -1,6 +1,6 @@
 # Papéis e responsabilidades
 
-O PGD Libre tem quatro papéis de usuário. Cada um vê uma interface diferente e tem permissões específicas.
+O PGD Livre tem quatro papéis de usuário. Cada um vê uma interface diferente e tem permissões específicas.
 
 ## Servidor
 

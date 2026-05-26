@@ -1,6 +1,6 @@
 # Visão geral — Servidor
 
-Como servidor no PGD Libre, **você é o autor do seu Plano de Trabalho** — propõe o que vai fazer, e a chefia revisa e assina junto com você. Depois, executa as atividades e registra mensalmente.
+Como servidor no PGD Livre, **você é o autor do seu Plano de Trabalho** — propõe o que vai fazer, e a chefia revisa e assina junto com você. Depois, executa as atividades e registra mensalmente.
 
 ## O que você faz no sistema
 
@@ -19,7 +19,7 @@ graph LR
 
 ## Sua tela principal
 
-![Dashboard do servidor no PGD Libre](../assets/screenshots/servidor/dashboard.png)
+![Dashboard do servidor no PGD Livre](../assets/screenshots/servidor/dashboard.png)
 
 Ao fazer login, você vê o **Dashboard** com:
 

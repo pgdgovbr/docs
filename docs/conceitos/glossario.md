@@ -1,6 +1,6 @@
 # Glossário
 
-Termos usados no PGD Libre e no Programa de Gestão e Desempenho.
+Termos usados no PGD Livre e no Programa de Gestão e Desempenho.
 
 ---
 

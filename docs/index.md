@@ -1,6 +1,6 @@
-# Bem-vindo ao PGD Libre
+# Bem-vindo ao PGD Livre
 
-O **PGD Libre** é uma plataforma de código aberto para gestão do [Programa de Gestão e Desempenho](conceitos/programa.md) no serviço público federal brasileiro.
+O **PGD Livre** é uma plataforma de código aberto para gestão do [Programa de Gestão e Desempenho](conceitos/programa.md) no serviço público federal brasileiro.
 
 Com ele, servidores, chefias e gestores têm um sistema único para criar planos de trabalho, registrar execução mensal, avaliar desempenho e manter conformidade com a legislação — sem planilhas, sem e-mails, sem risco de inconformidade.
 

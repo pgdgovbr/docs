@@ -1,6 +1,6 @@
 # Painel de Conformidade
 
-O painel de conformidade mostra o status de sincronização com a **API PGD Central** do MGI. O PGD Libre sincroniza automaticamente os dados de participantes, planos e avaliações com a API Central. Quando a sincronização falha, aparece aqui.
+O painel de conformidade mostra o status de sincronização com a **API PGD Central** do MGI. O PGD Livre sincroniza automaticamente os dados de participantes, planos e avaliações com a API Central. Quando a sincronização falha, aparece aqui.
 
 ## Como acessar
 

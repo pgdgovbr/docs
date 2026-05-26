@@ -1,7 +1,7 @@
 # Criar Plano de Trabalho (caso excepcional)
 
 !!! warning "O caminho padrão é o próprio servidor criar"
-    No PGD Libre, **o fluxo padrão é o servidor propor o Plano de Trabalho**. Use este wizard apenas em exceções: servidor recém-chegado, ausência prolongada, ou outros casos em que não é viável o servidor propor.
+    No PGD Livre, **o fluxo padrão é o servidor propor o Plano de Trabalho**. Use este wizard apenas em exceções: servidor recém-chegado, ausência prolongada, ou outros casos em que não é viável o servidor propor.
 
 ## Quando criar diretamente
 

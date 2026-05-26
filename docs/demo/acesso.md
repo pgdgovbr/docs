@@ -1,6 +1,6 @@
 # Como acessar a demo
 
-A instância de demonstração do PGD Libre já vem com dados pré-configurados para que você explore todas as funcionalidades sem precisar instalar nada.
+A instância de demonstração do PGD Livre já vem com dados pré-configurados para que você explore todas as funcionalidades sem precisar instalar nada.
 
 ## URL da demo
 
